@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+	<persistence-unit name="jpabook">
+		<class>net.crazyk.jpa.chapter01.domain.Member</class>
+		<class>net.crazyk.jpa.chapter04.domain.Member4</class>
+		<class>net.crazyk.jpa.chapter04.domain.Board4</class>
+		<class>net.crazyk.jpa.chapter04.domain.Member4</class>
+		<class>net.crazyk.jpa.chapter04.domain.RealItem4</class>
+		<class>net.crazyk.jpa.chapter04.domain.RealMember4</class>
+		<class>net.crazyk.jpa.chapter04.domain.RealOrder4</class>
+		<class>net.crazyk.jpa.chapter04.domain.RealOrderItem4</class>
+		<class>net.crazyk.jpa.chapter04.domain.RealOrderStatus4</class>
+
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+			<property name="javax.persistence.jdbc.user" value=""/>
+			<property name="javax.persistence.jdbc.password" value=""/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/h2"/>
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.format_sql" value="true"/>
+			<property name="hibernate.use_sql_comments" value="true"/>
+			<property name="hibernate.id.new_generator_mappings" value="true"/>
+
+			<!-- 스키마 자동 생성 -->
+			<property name="hibernate.hbm2ddl.auto" value="create"/>
+		</properties>
+	</persistence-unit>
+</persistence>
