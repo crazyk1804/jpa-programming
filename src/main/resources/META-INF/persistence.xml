@@ -2,7 +2,6 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
 	<persistence-unit name="jpabook">
 		<class>net.crazyk.jpa.chapter01.domain.Member</class>
-		<class>net.crazyk.jpa.chapter04.domain.Member4</class>
 		<class>net.crazyk.jpa.chapter04.domain.Board4</class>
 		<class>net.crazyk.jpa.chapter04.domain.Member4</class>
 		<class>net.crazyk.jpa.chapter04.domain.RealItem4</class>
@@ -11,6 +10,48 @@
 		<class>net.crazyk.jpa.chapter04.domain.RealOrderItem4</class>
 		<class>net.crazyk.jpa.chapter04.domain.RealOrderStatus4</class>
 
+		<class>net.crazyk.jpa.chapter05.domain.Member5</class>
+		<class>net.crazyk.jpa.chapter05.domain.Team5</class>
+		<class>net.crazyk.jpa.chapter05.domain.DuplexMember5</class>
+		<class>net.crazyk.jpa.chapter05.domain.DuplexTeam5</class>
+		<class>net.crazyk.jpa.chapter05.domain.RealMember5</class>
+		<class>net.crazyk.jpa.chapter05.domain.RealOrder5</class>
+		<class>net.crazyk.jpa.chapter05.domain.RealOrderItem5</class>
+		<class>net.crazyk.jpa.chapter05.domain.RealItem5</class>
+
+		<class>net.crazyk.jpa.chapter06.domain.Member6</class>
+		<class>net.crazyk.jpa.chapter06.domain.Product6</class>
+		<class>net.crazyk.jpa.chapter06.domain.ComplexMember6</class>
+		<class>net.crazyk.jpa.chapter06.domain.ComplexProduct6</class>
+		<class>net.crazyk.jpa.chapter06.domain.ComplexMemberProduct6</class>
+		<class>net.crazyk.jpa.chapter06.domain.SimpleMember6</class>
+		<class>net.crazyk.jpa.chapter06.domain.SimpleProduct6</class>
+		<class>net.crazyk.jpa.chapter06.domain.SimpleOrder6</class>
+
+		<class>net.crazyk.jpa.chapter06.domain.RealCategory6</class>
+		<class>net.crazyk.jpa.chapter06.domain.RealDelivery6</class>
+		<class>net.crazyk.jpa.chapter06.domain.RealItem6</class>
+		<class>net.crazyk.jpa.chapter06.domain.RealMember6</class>
+		<class>net.crazyk.jpa.chapter06.domain.RealOrder6</class>
+		<class>net.crazyk.jpa.chapter06.domain.RealOrderItem6</class>
+
+		<class>net.crazyk.jpa.chapter07.domain.JOINAlbum7</class>
+		<class>net.crazyk.jpa.chapter07.domain.JOINItem7</class>
+		<class>net.crazyk.jpa.chapter07.domain.JOINMovie7</class>
+		<class>net.crazyk.jpa.chapter07.domain.JOINSBook7</class>
+		<class>net.crazyk.jpa.chapter07.domain.PERAlbum7</class>
+		<class>net.crazyk.jpa.chapter07.domain.PERBook7</class>
+		<class>net.crazyk.jpa.chapter07.domain.PERItem7</class>
+		<class>net.crazyk.jpa.chapter07.domain.PERMovie7</class>
+		<class>net.crazyk.jpa.chapter07.domain.SINGLEAlbum7</class>
+		<class>net.crazyk.jpa.chapter07.domain.SINGLEBook7</class>
+		<class>net.crazyk.jpa.chapter07.domain.SINGLEItem7</class>
+		<class>net.crazyk.jpa.chapter07.domain.SINGLEMovie7</class>
+
+
+
+
+
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
 			<property name="javax.persistence.jdbc.user" value=""/>
@@ -18,13 +59,16 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/h2"/>
 
 			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-			<property name="hibernate.show_sql" value="true"/>
-			<property name="hibernate.format_sql" value="true"/>
-			<property name="hibernate.use_sql_comments" value="true"/>
+<!--			<property name="hibernate.show_sql" value="true"/>-->
+<!--			<property name="hibernate.format_sql" value="true"/>-->
+<!--			<property name="hibernate.use_sql_comments" value="true"/>-->
 			<property name="hibernate.id.new_generator_mappings" value="true"/>
 
 			<!-- 스키마 자동 생성 -->
 			<property name="hibernate.hbm2ddl.auto" value="create"/>
+			<!-- 이름 매핑 설정 (카멜 to 언더스코어) 안되는데...? -->
+			<property name="hibernate.ejb.naming_strategy"
+					  value="org.hibernate.cfg.ImprovedNamingStrategy"/>
 		</properties>
 	</persistence-unit>
 </persistence>

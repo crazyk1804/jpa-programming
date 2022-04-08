@@ -1,5 +1,6 @@
 package net.crazyk.jpa.chapter04;
 
+import net.crazyk.jpa.TestTemplate;
 import net.crazyk.jpa.chapter04.domain.Member4;
 import net.crazyk.jpa.chapter04.domain.RoleType;
 import org.junit.jupiter.api.AfterAll;
@@ -14,35 +15,13 @@ import javax.persistence.Persistence;
 import java.util.Arrays;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class Test01Persist {
+public class Test01Persist extends TestTemplate {
 	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpabook");
 	private EntityManager em = factory.createEntityManager();
 	private EntityTransaction tx = em.getTransaction();
 	@FunctionalInterface
-	interface JPATask { void toTask(); }
-	@FunctionalInterface
 	interface JPANewTask{ void doTask(Member4 m); }
 
-	@BeforeAll
-	void beforeAll() {
-
-	}
-
-	@AfterAll
-	void afterAll() {
-
-	}
-
-	void job(JPATask task) {
-		try {
-			tx.begin();
-			task.toTask();
-			tx.commit();
-		} catch(Exception e) {
-			tx.rollback();
-			throw e;
-		}
-	}
 	void newJob(JPANewTask task) {
 		try {
 			tx.begin();
@@ -55,21 +34,32 @@ public class Test01Persist {
 		}
 	}
 
+	@BeforeAll
+	void beforeAll() {
+
+	}
+
+	@AfterAll
+	void afterAll() {
+
+	}
+
+
 	@Test
 	void nonamaePersist() {
-		job(() -> {
+		tx(() -> {
 			Member4 member = new Member4();
-			member.setId("wjdwogml qhwlQkfrh tlvek");
+			member.setId("anjfkrh gkfwl ahfmrpTek");
 			em.persist(member);
 		});
 	}
 
 	@Test
 	void namePersist() {
-		job(() -> {
+		tx(() -> {
 			Member4 member = new Member4();
-			member.setId("wjdwogml qhwlQkfrh tlvek");
-			member.setUsername("qhwlaos");
+			member.setId("anjfkrh gkfwl ahfmrpTek");
+			member.setUsername("johndoe");
 			em.persist(member);
 		});
 	}
@@ -77,14 +67,14 @@ public class Test01Persist {
 	@Test
 	void uniqueViolation() {
 		// 이름과 나이 같은걸로 2개 insert (unique)
-		job(() -> {
+		tx(() -> {
 			Member4 m1 = new Member4();
 			Member4 m2 = new Member4();
-			m1.setId("wjdwogml qhwlQkfrh tlvek");
-			m1.setUsername("qhwlaos");
+			m1.setId("anjfkrh gkfwl ahfmrpTek");
+			m1.setUsername("johndoe");
 			m1.setAge(40);
-			m2.setId("wjdwogml qhwlQkfrh tlvek!!");
-			m2.setUsername("qhwlaos");
+			m2.setId("anjfkrh gkfwl ahfmrpTek!!");
+			m2.setUsername("johndoe");
 			m2.setAge(40);
 			Arrays.asList(m1, m2).forEach(m -> em.persist(m));
 		});
@@ -93,8 +83,8 @@ public class Test01Persist {
 	@Test
 	void typeTest() {
 		newJob(m -> {
-			m.setId("wjdwogml qhwlQkfrh tlvek!!");
-			m.setUsername("qhwlaos");
+			m.setId("anjfkrh gkfwl ahfmrpTek!!");
+			m.setUsername("johndoe");
 			m.setRoleType(RoleType.ADMIN);
 			em.persist(m);
 		});
