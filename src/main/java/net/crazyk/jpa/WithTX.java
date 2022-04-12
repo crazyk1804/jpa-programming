@@ -41,4 +41,8 @@ public class WithTX {
 		System.out.println("//////////////////////////////// JOB's END ////////////////////////////////");
 	}
 
+	public static void txt(Task task) {
+		tx(task, true);
+	}
+
 }

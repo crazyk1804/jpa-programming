@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
 	<persistence-unit name="jpabook">
+		<!--
+		어노테이션을 제대로 인식을 못하는데 Gradle을 사용해서 생기는 문제같다..
+		라고는 하지만 왜?
+		-->
 		<class>net.crazyk.jpa.chapter01.domain.Member</class>
 		<class>net.crazyk.jpa.chapter04.domain.Board4</class>
 		<class>net.crazyk.jpa.chapter04.domain.Member4</class>
@@ -47,10 +51,32 @@
 		<class>net.crazyk.jpa.chapter07.domain.SINGLEBook7</class>
 		<class>net.crazyk.jpa.chapter07.domain.SINGLEItem7</class>
 		<class>net.crazyk.jpa.chapter07.domain.SINGLEMovie7</class>
+		<class>net.crazyk.jpa.chapter07.domain.IDClassParent7</class>
+		<class>net.crazyk.jpa.chapter07.domain.IDClassChild7</class>
+		<class>net.crazyk.jpa.chapter07.domain.MappedBaseEntity7</class>
+		<class>net.crazyk.jpa.chapter07.domain.MappedMember7</class>
+		<class>net.crazyk.jpa.chapter07.domain.MappedSeller7</class>
+		<class>net.crazyk.jpa.chapter07.domain.EmbeddedIDParent7</class>
+		<class>net.crazyk.jpa.chapter07.domain.IdentifyingEmbeddedChild7</class>
+		<class>net.crazyk.jpa.chapter07.domain.IdentifyingEmbeddedGrandChild7</class>
+		<class>net.crazyk.jpa.chapter07.domain.IdentifyingEmbeddedParent7</class>
+		<class>net.crazyk.jpa.chapter07.domain.IdentifyingIDClassChild7</class>
+		<class>net.crazyk.jpa.chapter07.domain.IdentifyingIDClassGrandChild7</class>
+		<class>net.crazyk.jpa.chapter07.domain.IdentifyingIDClassParent7</class>
+		<class>net.crazyk.jpa.chapter07.domain.IdentifyingOTOBoard7</class>
+		<class>net.crazyk.jpa.chapter07.domain.IdentifyingOTOBoardDetail7</class>
+		<class>net.crazyk.jpa.chapter07.domain.JOINTableMTMChild7</class>
+		<class>net.crazyk.jpa.chapter07.domain.JOINTableMTMParent7</class>
+		<class>net.crazyk.jpa.chapter07.domain.JOINTableMTOChild7</class>
+		<class>net.crazyk.jpa.chapter07.domain.JOINTableMTOParent7</class>
+		<class>net.crazyk.jpa.chapter07.domain.JOINTableOTMChild7</class>
+		<class>net.crazyk.jpa.chapter07.domain.JOINTableOTMParent7</class>
+		<class>net.crazyk.jpa.chapter07.domain.JOINTableOTOChild7</class>
+		<class>net.crazyk.jpa.chapter07.domain.JOINTableOTOParent7</class>
+		<class>net.crazyk.jpa.chapter07.domain.MTableBoard7</class>
 
-
-
-
+		<class>net.crazyk.jpa.chapter08.domain.ProxyMember8</class>
+		<class>net.crazyk.jpa.chapter08.domain.ProxyTeam8</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
