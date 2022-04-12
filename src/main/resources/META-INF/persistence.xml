@@ -77,6 +77,8 @@
 
 		<class>net.crazyk.jpa.chapter08.domain.ProxyMember8</class>
 		<class>net.crazyk.jpa.chapter08.domain.ProxyTeam8</class>
+		<class>net.crazyk.jpa.chapter08.domain.EagerMember8</class>
+		<class>net.crazyk.jpa.chapter08.domain.EagerTeam8</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
