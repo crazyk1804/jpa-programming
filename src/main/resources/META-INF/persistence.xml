@@ -79,6 +79,54 @@
 		<class>net.crazyk.jpa.chapter08.domain.ProxyTeam8</class>
 		<class>net.crazyk.jpa.chapter08.domain.EagerMember8</class>
 		<class>net.crazyk.jpa.chapter08.domain.EagerTeam8</class>
+		<class>net.crazyk.jpa.chapter08.domain.LazyMember8</class>
+		<class>net.crazyk.jpa.chapter08.domain.LazyTeam8</class>
+		<class>net.crazyk.jpa.chapter08.domain.LazyExamMember8</class>
+		<class>net.crazyk.jpa.chapter08.domain.LazyExamTeam8</class>
+		<class>net.crazyk.jpa.chapter08.domain.LazyExamOrder8</class>
+		<class>net.crazyk.jpa.chapter08.domain.LazyExamProduct8</class>
+		<class>net.crazyk.jpa.chapter08.domain.NOCascadeParent8</class>
+		<class>net.crazyk.jpa.chapter08.domain.NOCascadeChild8</class>
+		<class>net.crazyk.jpa.chapter08.domain.CascadeParent8</class>
+		<class>net.crazyk.jpa.chapter08.domain.CascadeChild8</class>
+		<class>net.crazyk.jpa.chapter08.domain.OrphanParent8</class>
+		<class>net.crazyk.jpa.chapter08.domain.OrphanChild8</class>
+
+		<class>net.crazyk.jpa.chapter08.domain.real.Album8</class>
+		<class>net.crazyk.jpa.chapter08.domain.real.BaseEntity8</class>
+		<class>net.crazyk.jpa.chapter08.domain.real.Book8</class>
+		<class>net.crazyk.jpa.chapter08.domain.real.Category8</class>
+		<class>net.crazyk.jpa.chapter08.domain.real.Delivery8</class>
+		<class>net.crazyk.jpa.chapter08.domain.real.DeliveryStatus</class>
+		<class>net.crazyk.jpa.chapter08.domain.real.Item8</class>
+		<class>net.crazyk.jpa.chapter08.domain.real.Member8</class>
+		<class>net.crazyk.jpa.chapter08.domain.real.Movie8</class>
+		<class>net.crazyk.jpa.chapter08.domain.real.Order8</class>
+		<class>net.crazyk.jpa.chapter08.domain.real.OrderItem8</class>
+		<class>net.crazyk.jpa.chapter08.domain.real.OrderStatus8</class>
+
+		<class>net.crazyk.jpa.chapter09.domain.ValueTypeMember9</class>
+		<class>net.crazyk.jpa.chapter09.domain.ValueTypeAddress9</class>
+		<class>net.crazyk.jpa.chapter09.domain.real.Album09</class>
+		<class>net.crazyk.jpa.chapter09.domain.real.Book09</class>
+		<class>net.crazyk.jpa.chapter09.domain.real.Category09</class>
+		<class>net.crazyk.jpa.chapter09.domain.real.Delivery09</class>
+		<class>net.crazyk.jpa.chapter09.domain.real.DeliveryStatus09</class>
+		<class>net.crazyk.jpa.chapter09.domain.real.Item09</class>
+		<class>net.crazyk.jpa.chapter09.domain.real.Member09</class>
+		<class>net.crazyk.jpa.chapter09.domain.real.Movie09</class>
+		<class>net.crazyk.jpa.chapter09.domain.real.Order09</class>
+		<class>net.crazyk.jpa.chapter09.domain.real.OrderItem09</class>
+		<class>net.crazyk.jpa.chapter09.domain.real.OrderStatus09</class>
+
+		<class>net.crazyk.jpa.chapter10.domain.JPQLMember10</class>
+		<class>net.crazyk.jpa.chapter10.domain.JQMember10</class>
+		<class>net.crazyk.jpa.chapter10.domain.JQOrder10</class>
+		<class>net.crazyk.jpa.chapter10.domain.JQProduct10</class>
+		<class>net.crazyk.jpa.chapter10.domain.JQTeam10</class>
+
+
+
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
